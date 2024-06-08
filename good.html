@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main2.css" />
+    <link rel="stylesheet" />
+    <title>make new</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">Make New</div>
+        <div>가전제품을 새것처럼 바꿔드립니다</div>
+        <div class="search-bar">
+          <input type="text" placeholder="검색" />
+          <button type="submit">검색</button>
+        </div>
+        <div class="user-links">
+          <a href="#"
+            ><i
+              class="fa-solid fa-comments"
+              style="font-size: 20px; color: #3563e9"
+            ></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <div class="nav-wrap">
+        <ul>
+          <li class="dropdown">
+            <a href="#" class="category">
+              <span class="icon"><i class="fas fa-bars"></i></span>서비스 예약
+            </a>
+            <div class="dropdown-content">
+              <a href="index.html">모바일/디지털</a>
+              <a href="index.html">컴퓨터/주변기기</a>
+              <a href="index.html">가전제품/카메라</a>
+              <a href="index.html">TV</a>
+              <a href="index.html">프린터</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="category">
+              <span class="icon"><i class="fas fa-bars"></i></span>서비스 안내
+            </a>
+            <div class="dropdown-content">
+              <a href="#">요금안내</a>
+              <a href="#">유지보수/세척</a>
+              <a href="#">Make New Care+</a>
+              <a href="#">영수증/명세서 발급</a>
+              <a href="#">다운로드 자료실</a>
+              <a href="#">고객 자가수리</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="category">
+              <span class="icon"><i class="fas fa-bars"></i></span>고객의 소리
+            </a>
+            <div class="dropdown-content">
+              <a href="./good.html">칭찬합니다</a>
+              <a href="#">불편합니다</a>
+              <a href="#">궁금합니다</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="category">
+              <span class="icon"><i class="fas fa-bars"></i></span>회원관리
+            </a>
+            <div class="dropdown-content">
+              <a href="./login.html">로그인</a>
+              <a href="./member.html">회원가입</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section>
+      <p>칭찬합니다</p>
+      <p>박이슬 92450524</p>
+      <span id="result"></span>
+      <div id="proc-pic">
+        <img
+          src="img/girl.png"
+          alt="구글 이미지"
+          id="google"
+          width="200"
+          height="200"
+          onmouseover="changeSrc()"
+          onmouseout="resetSrc()"
+        />
+      </div>
+      <p>유선빈 92113724</p>
+      <span id="result1"></span>
+      <div id="proc-pic1">
+        <img
+          src="img/person.png"
+          alt="구글 이미지"
+          id="google1"
+          width="200"
+          height="200"
+          onmouseover="changeSrc1()"
+          onmouseout="resetSrc1()"
+        />
+      </div>
+      <p>임건희 91814333</p>
+      <span id="result2"></span>
+      <div id="proc-pic2">
+        <img
+          src="img/people.png"
+          alt="구글 이미지"
+          id="google2"
+          width="200"
+          height="200"
+          onmouseover="changeSrc2()"
+          onmouseout="resetSrc2()"
+        />
+      </div>
+    </section>
+
+    <script>
+      let google = document.querySelector("#google");
+      google.ondblclick = function () {
+        document.querySelector("#result").innerText = "Team";
+      };
+      let google1 = document.querySelector("#google1");
+      google1.ondblclick = function () {
+        document.querySelector("#result1").innerText = "Team";
+      };
+      let google2 = document.querySelector("#google");
+      google2.ondblclick = function () {
+        document.querySelector("#result2").innerText = "Team";
+      };
+      // google.onmouseover = changeSrc;
+      google.onmouseout = resetSrc;
+      google.addEventListener("click", displaySrc);
+      google.addEventListener("moseover", changeSrc);
+      google.addEventListener("mouseout", resetSrc);
+
+      function changeSrc() {
+        document
+          .querySelector("#google")
+          .setAttribute("src", "img/photo_portrait.png");
+      }
+      // google.onmouseover = changeSrc;
+      google1.onmouseout = resetSrc1;
+      google1.addEventListener("click", displaySrc1);
+      google1.addEventListener("moseover", changeSrc1);
+      google1.addEventListener("mouseout", resetSrc1);
+
+      function changeSrc1() {
+        document
+          .querySelector("#google1")
+          .setAttribute("src", "img/people.png");
+      }
+      // google.onmouseover = changeSrc;
+      google2.onmouseout = resetSrc;
+      google2.addEventListener("click", displaySrc2);
+      google2.addEventListener("moseover", changeSrc2);
+      google2.addEventListener("mouseout", resetSrc2);
+
+      function changeSrc() {
+        document.querySelector("#google").setAttribute("src", "img/person.png");
+      }
+      function resetSrc() {
+        document.querySelector("#google").setAttribute("src", "img/girl.png");
+      }
+      function resetSrc1() {
+        document
+          .querySelector("#google1")
+          .setAttribute("src", "img/people.png");
+      }
+      function resetSrc2() {
+        document
+          .querySelector("#google2")
+          .setAttribute("src", "img/person.png");
+      }
+    </script>
+    <footer>
+      <div class="footer-container">
+        <div class="quick-links">
+          <h3>빠른 링크</h3>
+          <ul>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <div class="company-info">
+            <h3>회사 정보</h3>
+            <p>회사명: ABC 주식회사</p>
+            <p>주소: 서울특별시 강남구 역삼동 123-45</p>
+            <p>전화번호: 02-1234-5678</p>
+          </div>
+          <div class="social-links">
+            <h3>소셜 미디어</h3>
+            <ul>
+              <li>
+                <a href="#"><i class="fab fa-facebook-square"></i> 페이스북</a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter-square"></i> 트위터</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fab fa-instagram-square"></i> 인스타그램</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function mobile() {
+        let element = document.getElementById("showcase");
+        element.style.background = "url(./img/mobile1.jpg) no-repeat";
+        document.getElementById("tell").innerHTML = "스마트폰/태블릿/웨어러블";
+        document.getElementById("abc").innerHTML =
+          "전원/배터리/충전/멈춤/오류/재시작";
+        document.getElementById("same").innerHTML =
+          "Make New에서 더 나은 서비스를 제공해드립니다.";
+      }
+      function com() {
+        let element = document.getElementById("showcase");
+        element.style.background = "url(./img/computer1.jpg) no-repeat";
+        element.style.color = " rgb(246, 177, 27)";
+        document.getElementById("tell").innerHTML = "노트북/데스크톱/모니터";
+        document.getElementById("abc").innerHTML =
+          "전원/배터리/충전/멈춤/오류/재시작";
+        document.getElementById("same").innerHTML =
+          "Make New에서 더 나은 서비스를 제공해드립니다.";
+      }
+      function camera() {
+        let element = document.getElementById("showcase");
+        element.style.background = "url(./img/camera.jpg) no-repeat";
+        document.getElementById("tell").innerHTML = "카메라/가전제품";
+        document.getElementById("abc").innerHTML =
+          "전원/배터리/촬영/렌즈/멈춤/오류/재시작";
+        document.getElementById("same").innerHTML =
+          "Make New에서 더 나은 서비스를 제공해드립니다.";
+      }
+      function tv() {
+        let element = document.getElementById("showcase");
+        element.style.background = "url(./img/monitor1.jpg) no-repeat";
+        document.getElementById("tell").innerHTML = "TV/DMB";
+        document.getElementById("abc").innerHTML = "전원/배터리/멈춤/오류";
+        document.getElementById("same").innerHTML =
+          "Make New에서 더 나은 서비스를 제공해드립니다.";
+      }
+      function print() {
+        let element = document.getElementById("showcase");
+        element.style.background = "url(./img/printer1.jpg) no-repeat";
+        document.getElementById("tell").innerHTML = "프린트";
+        document.getElementById("abc").innerHTML =
+          "전원/배터리/멈춤/오류/재시작";
+        document.getElementById("same").innerHTML =
+          "Make New에서 더 나은 서비스를 제공해드립니다.";
+      }
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>
