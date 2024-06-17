@@ -77,48 +77,104 @@
         </ul>
       </div>
     </nav>
-    <section>
-      <p>칭찬합니다</p>
-      <p>박이슬 92450524</p>
-      <span id="result"></span>
-      <div id="proc-pic">
-        <img
-          src="img/girl.png"
-          alt="구글 이미지"
-          id="google"
-          width="200"
-          height="200"
-          onmouseover="changeSrc()"
-          onmouseout="resetSrc()"
-        />
-      </div>
-      <p>유선빈 92113724</p>
-      <span id="result1"></span>
-      <div id="proc-pic1">
-        <img
-          src="img/person.png"
-          alt="구글 이미지"
-          id="google1"
-          width="200"
-          height="200"
-          onmouseover="changeSrc1()"
-          onmouseout="resetSrc1()"
-        />
-      </div>
-      <p>임건희 91814333</p>
-      <span id="result2"></span>
-      <div id="proc-pic2">
-        <img
-          src="img/people.png"
-          alt="구글 이미지"
-          id="google2"
-          width="200"
-          height="200"
-          onmouseover="changeSrc2()"
-          onmouseout="resetSrc2()"
-        />
-      </div>
-    </section>
+  </nav><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .row:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+    width: 100%;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+  
+  html {
+    font-family: "Lucida Sans", sans-serif;
+  }
+  
+  .header {
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color :#33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+  
+  .menu li:hover {
+    background-color: #0099cc;
+  }
+  
+  .aside {
+    background-color: #33b5e5;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+  
+  .footer {
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+  }
+  </style>
 
     <script>
       let google = document.querySelector("#google");
@@ -178,42 +234,7 @@
           .setAttribute("src", "img/person.png");
       }
     </script>
-    <footer>
-      <div class="footer-container">
-        <div class="quick-links">
-          <h3>빠른 링크</h3>
-          <ul>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보 처리방침</a></li>
-            <li><a href="#">고객센터</a></li>
-          </ul>
-        </div>
-        <div class="footer-content">
-          <div class="company-info">
-            <h3>회사 정보</h3>
-            <p>회사명: ABC 주식회사</p>
-            <p>주소: 서울특별시 강남구 역삼동 123-45</p>
-            <p>전화번호: 02-1234-5678</p>
-          </div>
-          <div class="social-links">
-            <h3>소셜 미디어</h3>
-            <ul>
-              <li>
-                <a href="#"><i class="fab fa-facebook-square"></i> 페이스북</a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-twitter-square"></i> 트위터</a>
-              </li>
-              <li>
-                <a href="#"
-                  ><i class="fab fa-instagram-square"></i> 인스타그램</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
+    
     <script>
       function mobile() {
         let element = document.getElementById("showcase");
@@ -261,6 +282,80 @@
           "Make New에서 더 나은 서비스를 제공해드립니다.";
       }
     </script>
+     <div class="header">
+      <h1>JB라디오 방송국~</h1>
+    </div>
+    
+    <div class="row">
+      <div class="col-3 col-s-3 menu">
+        <ul>
+          <li>Listen</li>
+          <li>visit</li>
+          <li>laugh</li>
+          <li>sympathy</li>
+        </ul>
+      </div>
+    
+      <div class="col-6 col-s-9">
+        <h1>궁금합니다 우리의 DJ!!</h1>
+        <p>
+          
+        </p>
+        <img src="img/robot.jpg" width="460" height="345">
+      </div>
+    
+      <div class="col-3 col-s-12">
+        <div class="aside">
+          <h2>When?</h2>
+          <p>2024.03.20.(수)~ </p>
+          <h2>Where?</h2>
+          <p> wonderfruit 3 - 5홀</p>
+          <h2>How?</h2>
+          <p> 보이는 라디오도 진행합니다. 선착순입니다. 늦지말고 방청신청 후 보러오셔용~~!</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>우리 생활에 기쁨을 주고 행복을 주고 도움이 될 
+        것이다.</p>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="quick-links">
+          <h3>빠른 링크</h3>
+          <ul>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <div class="company-info">
+            <h3>회사 정보</h3>
+            <p>회사명: ABC 주식회사</p>
+            <p>주소: 서울특별시 강남구 역삼동 123-45</p>
+            <p>전화번호: 02-1234-5678</p>
+          </div>
+          <div class="social-links">
+            <h3>소셜 미디어</h3>
+            <ul>
+              <li>
+                <a href="#"><i class="fab fa-facebook-square"></i> 페이스북</a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter-square"></i> 트위터</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fab fa-instagram-square"></i> 인스타그램</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="main.js"></script>
   </body>
 </html>
